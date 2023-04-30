@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <title>Продаж нерухомості</title>
+</head>
+<body>
+    <header style="background-color: black; color: white; padding: 20px;">
+        <nav>
+          <img src="logo.png" title="logo" width="150px" height="150px">
+          <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="categori.html">Категорії/моделі</a></li>
+            <li><a href="akcie.html">Акції</a></li>
+            <li><a href="finance.html">фінансування</a></li>
+            <li><a href="login.html">Увійти</a></li>
+            <li><a href="registration.html">Реєстрація</a></li>
+          </ul>
+        </nav>
+      </header>
+  <h1>Нерухомість для продажу</h1>
+  
+  <h2>Сортування</h2>
+  <button onclick="sortByPrice()">За ціною</button>
+  <button onclick="sortByLocation()">За розташуванням</button>
+
+  <div class="form">
+    <h2>Login Here</h2>
+    <input type="email" name="email" placeholder="Enter Email Here">
+    <input type="password" name="" placeholder="Enter Password Here">
+    <button class="btnn"><a href="#">Login</a></button>
+
+    <p class="link">Don't have an account<br>
+    <a href="#">Sign up </a> here</a></p>
+    <p class="liw">Log in with</p>
+
+    <div class="icons">
+        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+    </div>
+
+  <ul id="property-list">
+    <li>
+      <h3>Квартира №1</h3>
+      <img src="kvartira1.jpg" alt="Фото квартири">
+      <p>Розташування: Біля злати плази</p>
+      <p>Площа: 65 м²</p>
+      <p>Кількість кімнат: 2</p>
+      <p>Ціна: 839.999 грн.</p>
+      <a href="kvartira1.html">Детальніше</a>
+    </li>
+    <li>
+      <h3>Квартира №2</h3>
+      <img src="https://example.com/kvartira2.jpg" alt="Фото квартири">
+      <p>Розташування: Новобудова на Щасливому</p>
+      <p>Площа: 76 м²</p>
+      <p>Кількість кімнат: 3</p>
+      <p>Ціна: 2.639.942 грн.</p>
+      <a href="https://example.com/kvartira2.html">Детальніше</a>
+    </li>
+<li>
+        <h3>Квартира №3</h3>
+<img src="https://example.com/kvartira3.jpg" alt="Фото квартири">
+        <p>Розташування: Вул. Набережна</p>
+        <p>Площа: 48 м²</p>
+        <p>Кількість кімнат: 1</p>
+        <p>Ціна: 730.234 грн.</p>
+      <a href="https://example.com/kvartira3.html">Детальніше</a>
+      </li>
+    </ul>
+    <h3>Будинки</h3>
+    <ul>
+    <li>
+  <h3>Будинок №1</h3>
+  <img src="https://example.com/budynok1.jpg" alt="Фото будинку">
+  <p>Розташування: За містом.Рівне</p>
+  <p>Площа: 162 м²</p>
+  <p>Кількість кімнат: 6</p>
+  <p>Ціна: 8.432.932 грн.</p>
+  <a href="https://example.com/budynok1.html">Детальніше</a>
+</li>
+<li>
+        <h3>Будинок №2</h3>
+<img src="https://example.com/budynok2.jpg" alt="Фото будинку">
+        <p>Розташування: Місто Львів</p>
+        <p>Площа землі: 5 соток</p>
+        <p>Площа будинку: 386 м²</p>
+        <p>Кількість кімнат: 8</p>
+        <p>Ціна: 13.187.492 грн.</p>
+  <a href="https://example.com/budynok2.html">Детальніше</a>
+      </li>
+  </ul>
+  <script>
+    function sortByPrice() {
+      let propertyList = document.getElementById("property-list");
+      let properties = propertyList.getElementsByTagName("li");
+      let propertiesArray = Array.from(properties);
+
+      propertiesArray.sort((a, b) => {
+        let aPrice = parseInt(a.querySelector("p:last-of-type").textContent.match(/\d+/)[0]);
+        let bPrice = parseInt(b.querySelector("p:last-of-type").textContent.match(/\d+/)[0]);
+        return aPrice - bPrice;
+      });
+
+      propertyList.innerHTML = "";
+      propertiesArray.forEach(property => propertyList.appendChild(property));
+    }
+
+    function sortByLocation() {
+      let propertyList = document.getElementById("property-list");
+      let properties = propertyList.getElementsByTagName("li");
+      let propertiesArray = Array.from(properties);
+
+      propertiesArray.sort((a, b) => {
+        let aLocation = a.querySelector("p:nth-of-type(2)").textContent;
+        let bLocation = b.querySelector("p:nth-of-type(2)").textContent;
+        return aLocation.localeCompare(bLocation);
+      });
+
+      propertyList.innerHTML = "";
+      propertiesArray.forEach(property => propertyList.appendChild(property));
+    }
+  </script>
+</body>
+</html>
