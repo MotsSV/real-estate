@@ -1,0 +1,129 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .finance1 {
+    margin-bottom: 20px;
+  }
+
+  .finance1 .bank {
+    font-weight: bold;
+  }
+
+  .finance1 .rate {
+    color: green;
+  }
+  
+  .golovna {
+    top: 20px;
+    background-color: #17202A; 
+    position: absolute;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+   }
+   
+   .golovna:hover {
+     left: 0px;
+   }
+   
+   .categori {
+    top: 80px;
+    background-color: #212F3D; 
+    position: absolute;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+   }
+   
+   .categori:hover {
+     left: 0px;
+   }
+   
+   .akcie {
+    top: 165px;
+    background-color: #2C3E50; 
+    position: absolute;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+   }
+   
+   .akcie:hover {
+     left: 0px;
+   }
+   
+   .finance {
+    top: 225px;
+    background-color: #566573; 
+    position: absolute;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+   }
+   
+   .finance:hover {
+     left: 0px;
+   }
+   
+   .login {
+    top: 285px;
+    background-color: #808B96; 
+    position: absolute;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+   }
+   
+   .login:hover {
+     left: 0px;
+   }
+   
+   .registration {
+    top: 345px;
+    background-color: #ABB2B9; 
+    position: absolute;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+   }
+   
+   .registration:hover {
+     left: 0px;
+   }
